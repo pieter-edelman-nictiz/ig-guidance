@@ -132,6 +132,25 @@ the IG text.  It will also allow filtering by the different columns visible.
 This view will provide a complete list of all conformance statements found in the IG and
 will allow filtering them based on actor and/or category.
 
+### Guidance for interpretting the table
+It is quite likely that readers will misinterpret this table without additional guidance.  Implementation guides that display this table should include an introduction that covers most or all of the following content (though feel free to adjust the wording or even submit a PR to improve the suggested wording found here):
+
+<div markdown="1">
+This page contains a table listing all the free-text conformance statements found in the IG. This table is provided as a useful summary for implementers for the purpose of evaluating key features and to support testing. However, reading this table alone is insufficient to understand or successfully implement the specification:
+
+1. The table only includes conformance expectations expressed as free text. It does not include the computable expectations represented in capability statements, profiles, value sets, etc.
+2. The text text in the table only includes the 'formal' requirement. It does not provide the contextual language around the statement that will be needed for successful explanation. The 'id' of each statement is a hyperlink to the place it appears in the text to assist with gathering the needed context.
+
+A few other notes:
+
+* The ids are generally specific to the pages on which the requirements appear, but not always. If content is moved from one page to another, the id will remain the same.
+* While ids start as contiguous, as the specification is updated, it is possible some conformance statements will be removed, which will create a gap in the numbers. This is not an error.
+* Ids are not final until published in an official release. After that point, ids will not be changed.
+* It is possible for the text of a given rules to change somewhat from one release to another so long as the intention of the rule is the same. If the intent has a significant change, the old rule will be removed and a new one added in its place (with a new id).
+* The requirements are expressed against a set of actors that represent 'logical entities' relevant to the IG. However, there may be multiple real-world systems in a given implementation that actually compose those logical entities.  This distribution of functionality between real systems will vary by implementation. It will be up to implementers to determine how the various conformance statements will apply to the actal systems in their architecture.
+* The categorizations are general. In practice, all 'exchange', 'ui', and 'storage' requirements are some aspect of 'processing' requirements. The categories will give hints as to the architectural layer a requirement will apply to, but there is nothing definitive implied by the category(ies) listed.
+</div>
+
 ## Requirements Resource
 
 If conformance statements are marked up using the syntax described in this page, the publisher will also generate a
